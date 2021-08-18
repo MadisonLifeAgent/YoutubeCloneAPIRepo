@@ -27,7 +27,7 @@ class CommentList(APIView):
 #             return Response(serializer.data, status=status.HTTP_200_OK)
 #         return Response(status=status.HTTP_404_NOT_FOUND)
 
-# class SongLikes(APIView):
+# class CommentLikes(APIView):
 #     def get(self, request, id):
 #         song = Song.objects.get(pk=id)
 #         if song:
