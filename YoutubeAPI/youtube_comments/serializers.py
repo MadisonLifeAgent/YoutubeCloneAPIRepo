@@ -10,3 +10,8 @@ class CommentSerializer(serializers.ModelSerializer):
     #     instance.likes += 1
     #     instance.save()
     #     return instance
+
+    # def dislike(self, instance):
+    #     instance.dislikes += 1
+    #     instance.save()
+    #     return instance
