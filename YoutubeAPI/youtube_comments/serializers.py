@@ -6,12 +6,12 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = ['videoId', 'body', 'likes', 'dislikes', 'parentComment']
 
-    # def like(self, instance):
-    #     instance.likes += 1
-    #     instance.save()
-    #     return instance
+    def like(self, instance):
+        instance.likes += 1
+        instance.save()
+        return instance
 
-    # def dislike(self, instance):
-    #     instance.dislikes += 1
-    #     instance.save()
-    #     return instance
+    def dislike(self, instance):
+        instance.dislikes += 1
+        instance.save()
+        return instance
