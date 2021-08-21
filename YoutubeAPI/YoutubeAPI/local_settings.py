@@ -12,7 +12,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'youtube',
         'USER': 'root',
-        'PASSWORD': 'WalkTheFadedLine',
+        'PASSWORD': 'FocusRite!@34',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {

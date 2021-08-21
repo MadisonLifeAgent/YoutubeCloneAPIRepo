@@ -4,7 +4,7 @@ from .models import Comment
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ['videoId', 'body', 'likes', 'dislikes', 'parentComment']
+        fields = ['id', 'videoId', 'body', 'likes', 'dislikes', 'parentComment']
 
     def like(self, instance):
         instance.likes += 1
