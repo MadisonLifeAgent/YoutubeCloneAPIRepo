@@ -20,6 +20,15 @@ class CommentList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class MakeReply(APIView):
+    def post(self, request, video_id):
+        reply = Comment(videoId=video_id)
+        serializer = CommentSerializer(reply, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class CommentDetail(APIView):
     def get(self, request, id):
         comment = Comment.objects.get(id=id)
